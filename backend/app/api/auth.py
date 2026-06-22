@@ -96,7 +96,8 @@ async def google_callback(
         {
             "user_id": user.id,
             "email": user.email,
-            "name": user.name
+            "name": user.name,
+            "role": user.role
         }
     )
 
@@ -131,5 +132,6 @@ def get_me(
     return {
         "user_id": payload.get("user_id"),
         "email": payload.get("email"),
-        "name": payload.get("name")
+        "name": payload.get("name"),
+        "role": payload.get("role")
     }
